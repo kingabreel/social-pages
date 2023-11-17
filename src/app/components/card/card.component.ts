@@ -10,4 +10,12 @@ export class CardComponent {
   imgLink: string = '';
   @Input()
   title: string = '';
+
+  constructor() {
+    this.goToEndPoint = this.goToEndPoint.bind(this);
+  }
+
+  goToEndPoint(){
+    window.location.href = '/' + this.title;
+  }
 }
