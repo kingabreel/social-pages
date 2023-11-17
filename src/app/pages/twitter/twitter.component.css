@@ -1,0 +1,129 @@
+* {
+    background-color: #000;
+    color: #fff;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.twitter-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 250px;
+    height: 95vh;
+}
+
+.login-box {
+    width: 500px;
+}
+
+.text-title > h1, .text-title > h2 {
+    color: #E7E9EA;
+}
+.text-title > h1 {
+    font-size: 68px;
+} 
+
+.text-title > h2 {
+    margin-top: 50px;
+    font-size: 34px;
+}
+
+.buttons {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+button {
+    width: 300px;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 30px;
+    background-color: #fff;
+    color: #000;
+    font-weight: 600;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+button > img {
+    width: 20px;
+}
+
+.google-button {
+    color: #777;
+    font-weight: 400;
+}
+
+.buttons > h2 {
+    font-size: 14px;
+    font-weight: 400;
+}
+.buttons > h2::before {
+    content: '';
+    width: 125px;
+    height: 1px;
+    display: inline-block;
+    background-color: #222;
+    margin: 0 10px 5px 0;
+}
+.buttons > h2::after {
+    content: '';
+    width: 125px;
+    height: 1px;
+    display: inline-block;
+    background-color: #222;
+    margin: 0 0 5px 10px;
+}
+
+.account-button {
+    background-color: #1D9BF0;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.text-terms {
+    width: 300px;
+    margin-bottom: 50px;
+}
+
+.text-terms > p {
+    text-align: justify;
+    font-size: 12px;
+    color: #777;
+}
+
+.text-terms > p > a {
+    text-decoration: none;
+    color: #1D9BF0;
+}
+
+.login-account > h2 {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.login-button {
+    color: #1D9BF0;
+    background-color: #000;
+    border: 1px solid #888;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 5px;
+    gap: 20px;
+    height: 5vh;
+}
+
+.footer-container > a, .footer-container > p {
+    text-decoration: none;
+    font-size: 12px;
+    color: #777;
+}
