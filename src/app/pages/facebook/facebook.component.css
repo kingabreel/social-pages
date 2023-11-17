@@ -1,0 +1,161 @@
+* {
+    font-family: San system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.facebook-container {
+    background-color: #F0F2F5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    width: 100wh;
+    height: 80vh;
+}
+
+.text-container {
+    width: 500px;
+}
+.text-container > h1 {
+    color: #1772da;
+    font-size: 56px;
+}
+
+.text-container > p {
+    font-size: 28px;
+    color: #222;
+}
+
+.login-box {
+    background-color: #fff;
+    width: 400px;
+    height: 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7px;
+    box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.2);
+}
+
+.login-box > form {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #fff;
+}
+
+form > input {
+    padding: 5px 15px;
+    outline: none;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    width: 350px;
+    height: 50px;
+    background-color: #fff;
+
+}
+
+form > input::placeholder {
+    font-size: 16px ;
+}
+
+.login-button {
+    background-color: #1772da;
+    border-radius: 6px;
+    color: #fff;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 10x auto;
+    margin: 10px 0;
+    width: 350px;
+    height: 50px;
+    border: none;
+    cursor: pointer;
+}
+
+.forgot-pass {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+    background-color: #fff;
+}
+
+.forgot-pass > h1 {
+    font-size: 14px;
+    font-weight: 400;
+    color: #1772da;
+    background-color: #fff;
+    cursor: pointer;
+}
+.create-account::before {
+    content: '';
+    width: 350px;
+    height: 1px;
+    background-color: #999;
+    display: block;
+    margin-bottom: 20px;
+}
+.create-account {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    align-items: center;
+    cursor: pointer;
+}
+
+.create-account > button {
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    background-color: #42B72A;
+    border-radius: 5px;
+    border: none;
+    padding: 15px;
+    width: 200px;
+    cursor: pointer;
+}
+
+.login-text {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.login-text > p {
+    font-size: 14px;
+}
+
+.login-text > p > a {
+    text-decoration: none;
+    color: #111;
+    font-weight: bold;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+footer > .languages-container, footer > .informations-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.languages-container > a, .informations-container > a {
+    font-size: 12px;
+    text-decoration: none;
+    color: #888;
+}
+
+footer div.informations-container {
+    margin: 0;
+    padding-top: 10px;
+    border-top: 1px solid #ccc;
+    flex-wrap: wrap;
+    width: 950px;
+}
