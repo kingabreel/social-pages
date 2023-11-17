@@ -1,0 +1,154 @@
+.instagram-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+}
+.login-container, .new-account{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    border: 1px solid #ccc;
+    width: 350px;
+}
+
+.login-container > img {
+    margin-top: 50px;
+}
+.login-box {
+    display: flex;
+    flex-direction: column;
+    padding: 3%;
+}
+
+.login-box form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.login-box form > input {
+    padding: 10px 5px;
+    outline: none;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    width: 260px;
+}
+
+form > input::placeholder {
+    font-size: 12px ;
+}
+
+.login-button {
+    background-color: #1772da;
+    border-radius: 6px;
+    color: #fff;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 10x auto;
+    width: 260px;
+    height: 35px;
+    border: none;
+}
+
+.login-container div.division > h1 {
+    font-size: 12px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #777;
+}
+
+div.division {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.login-container div.division > h1::before, 
+div.division > h1::after{
+    content: '';
+    width: 100px;
+    height: 1px;
+    background-color: #ccc;
+    display: inline-block;
+    margin: 0 10px 4px 10px;
+}
+
+.login-fb {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.login-fb_button {
+    display: flex;
+    gap: 10px;
+}
+
+.login-fb_button > h1.fb-text {
+    font-size: 14px;
+    color: #0c4f9b;
+}
+
+.login-fb > h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-size: 12px;
+    color: #0c4f9b;
+}
+
+.new-account { 
+    margin-top: 10px;
+    padding: 20px;
+}
+.apps-container {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+.new-account > p, .apps-container > p {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 14px;
+    text-align: center;
+}
+
+.new-account p > a {
+    text-decoration: none;
+    font-weight: 500;
+    color: #1772da;
+}
+
+.app-image {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+.app-image > img {
+    width: 130px;
+}
+footer {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+footer > div.informations-footer, .ig-copywriting {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    justify-content: center;
+}
+
+div.informations-footer > a, .ig-copywriting{
+    text-decoration: none;
+    font-size: 12px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #777;
+}
+
+.ig-copywriting {
+    display: flex;
+    gap: 30px;
+}
