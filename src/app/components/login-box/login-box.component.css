@@ -31,10 +31,18 @@
     width: 365px;
     height: 60px;
     margin-bottom: 10px;
+    padding-left: 30px;
+    font-size: 16px;
+
 }
 
 #input::placeholder {
     font-size: 16px;
+}
+.data-input > input#input:focus {
+    border: 2px solid #006eff;
+    outline: none;
+    transition: 1s ease-out;
 }
 
 .data-input > h3 {
@@ -78,12 +86,53 @@
     cursor: pointer;
 }
 
-.buttons > .create-account {
+.buttons > .create-account, 
+.buttons > .another-way_button {
     background: none;
     color: #006eff;
 }
 
-.buttons > .button-next_page {
+.buttons > .button-next_page,
+.buttons > .button-login {
     background-color: #006eff;
     color: #fff;
+}
+
+.input-password h2>img {
+    width: 25px;
+    height: 25px;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.text-container #mail-pass_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+    border: 1px solid #bbbbbb;
+    border-radius: 30px;
+    max-width: 100%;
+    height: 30px;
+    font-size: 14px;
+    color: #333;
+    letter-spacing: .7px;
+}
+
+.checkbox_container {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 60px;
+    margin-top: 15px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.checkbox_container p {
+    font-size: 14px;
+    color: #222;
 }

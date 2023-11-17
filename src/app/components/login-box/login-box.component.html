@@ -2,21 +2,44 @@
     <div class="logo-container">
         <img src="{{imageLink}}" alt="#">
     </div>
-    <div class="text-container">
-        <h1>Fazer login</h1>
-        <h2>Use sua Conta do Google</h2>
-    </div>
-    <div class="data-input">
-        <input id="input" type="email" placeholder="   E-mail ou telefone">
-        <h3 class="email-forget-text" (click)="forgetPassword()">Esqueceu sua e-mail?</h3>
+    <div class="input-email" *ngIf="emailScreen">
+        <div class="text-container">
+            <h1>Fazer login</h1>
+            <h2>Use sua Conta do Google</h2>
+        </div>
+        <div class="data-input">
+            <input [(ngModel)]="userMail" id="input" type="email" placeholder="E-mail ou telefone">
+            <h3 class="email-forget-text" (click)="forgetPassword()">Esqueceu sua e-mail?</h3>
+        </div>
+
+        <div class="help-text">
+            <p>Não está no seu computador? Use uma janela privada para fazer login. <a>Saiba mais</a></p>
+        </div>
+
+        <div class="buttons">
+            <button class="create-account" (click)="createAccount()">Criar conta</button>
+            <button class="button-next_page" (click)="goToInputPassword()">Avançar</button>
+        </div>
     </div>
 
-    <div class="help-text">
-        <p>Não está no seu computador? Use uma janela privada para fazer login. <a>Saiba mais</a></p>
-    </div>
+    <div class="input-password" *ngIf="passwordScreen">
+        <div class="text-container">
+            <h1>Olá!</h1>
+            <h2 id="mail-pass_container"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrbJgoqVZrAgEEIcnIX3LVq1yolhkvynHSSQ&usqp=CAU">
+            {{userMail}}</h2>
+        </div>
+        <div class="data-input">
+            <input id="input" [attr.type]="checkBoxValue ? 'string' : 'password'" placeholder="Digite sua senha">
+            
+            <div class="checkbox_container" (click)="showPass()">
+                <input type="checkbox" [ngModel]="checkBoxValue">
+                <p>Mostrar senha</p>
+            </div>
+        </div>
 
-    <div class="buttons">
-        <button class="create-account" (click)="createAccount()">Criar conta</button>
-        <button class="button-next_page" (click)="goToInputPassword()">Avançar</button>
+        <div class="buttons">
+            <button class="another-way_button" (click)="createAccount()">Tentar de outra forma</button>
+            <button class="button-login" (click)="navigate()">Avançar</button>
+        </div>
     </div>
 </div>

@@ -16,3 +16,11 @@
     margin-top: 20px;
     cursor: pointer;
 }
+
+#aviso {
+    display: flex;
+    justify-content: flex-end;
+    margin: 30px;
+    font-size: 12px;
+    font-weight: 500;
+}
