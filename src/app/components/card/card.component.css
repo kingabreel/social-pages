@@ -1,0 +1,24 @@
+.card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 200px;
+    height: 200px;
+}
+
+h1.title {
+    font-size: 32px;
+    color: #111;
+}
+
+.img-container {
+    width: 160px;
+    height: 150px;
+}
+
+.img-container > img {
+    width: 160px;
+    height: 130px;
+}

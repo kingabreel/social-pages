@@ -9,6 +9,8 @@ import { FacebookComponent } from './pages/facebook/facebook.component';
 import { InstagramComponent } from './pages/instagram/instagram.component';
 import { TwitterComponent } from './pages/twitter/twitter.component';
 import { GoogleComponent } from './pages/google/google.component';
+import { PageOptionsComponent } from './components/page-options/page-options.component';
+import { CardComponent } from './components/card/card.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { GoogleComponent } from './pages/google/google.component';
     FacebookComponent,
     InstagramComponent,
     TwitterComponent,
-    GoogleComponent
+    GoogleComponent,
+    PageOptionsComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
