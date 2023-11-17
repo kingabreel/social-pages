@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-login-box',
@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./login-box.component.css']
 })
 export class LoginBoxComponent {
-
+@Input()
+imageLink: string = ''; 
 }

@@ -1,0 +1,18 @@
+.google-container {
+    width: 450px;
+    height: 450px;
+    margin: 200px auto;
+}
+
+.item {
+    color: #444;
+    font-size: 12px;
+    list-style: none;
+}
+
+.list {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    cursor: pointer;
+}

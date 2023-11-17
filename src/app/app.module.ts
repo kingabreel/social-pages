@@ -11,6 +11,7 @@ import { TwitterComponent } from './pages/twitter/twitter.component';
 import { GoogleComponent } from './pages/google/google.component';
 import { PageOptionsComponent } from './components/page-options/page-options.component';
 import { CardComponent } from './components/card/card.component';
+import { HomeComponent } from './pages/home/home.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { CardComponent } from './components/card/card.component';
     TwitterComponent,
     GoogleComponent,
     PageOptionsComponent,
-    CardComponent
+    CardComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
