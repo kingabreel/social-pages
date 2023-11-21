@@ -1,11 +1,12 @@
 .card-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     margin: auto;
     width: 200px;
     height: 200px;
+    gap: 25px;
 }
 
 h1.title {
@@ -13,12 +14,7 @@ h1.title {
     color: #111;
 }
 
-.img-container {
-    width: 160px;
-    height: 150px;
-}
-
 .img-container > img {
-    width: 160px;
-    height: 130px;
+    max-width: 160px;
+    max-height: 130px;
 }
