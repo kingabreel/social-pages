@@ -48,6 +48,7 @@ button {
     align-items: center;
     justify-content: center;
     gap: 10px;
+    cursor: pointer;
 }
 
 button > img {
@@ -126,4 +127,121 @@ button > img {
     text-decoration: none;
     font-size: 12px;
     color: #777;
+}
+
+.login-box_container {
+    width: 600px;
+    height: 650px;
+    position: absolute;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    margin: 10% 35%;
+    z-index: 1;
+}
+
+.login-box_header {
+    display: flex;
+}
+
+.login-box_container > .login-box_header > img {
+    width: 50px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    margin: 10px auto;
+}
+
+.login-box_container > .login-box_header > a {
+    width: 10px;
+    height: 20px;
+    margin: 10px 10px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.login-box_container > .text {
+    display: flex;
+    justify-content: center;
+}
+
+.login-box_container > .text h1 {
+    font-size: 32px;
+}
+.login-box_container .buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons > input {
+    padding: 20px 15px;
+    width: 300px;
+    border-radius: 5px;
+    border: 1px solid #444;
+    font-size: 16px;
+}
+
+.forgot-pass {
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #777;
+}
+
+.create-account {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.create-account > h2 {
+    font-size: 14px;
+    color: #555;
+    font-weight: 400;
+}
+
+.create-account h2 > a {
+    text-decoration: none;
+    color: #1D9BF0;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+}
+.inputs > div, .inputs input {
+    padding: 20px 15px;
+    width: 300px;
+    border-radius: 5px;
+    border: 1px solid #444;
+    font-size: 16px;
+    background-color: #111;
+}
+
+.inputs > input {
+    background-color: #000;
+    margin-top: 15px;
+}
+
+div.username > h1 {
+    background-color: #111;
+    font-size: 16px;
+    font-weight: 400;
+    color: #666;
+}
+
+.inputs > p {
+    color: #1D9BF0;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+#login-button {
+    display: flex;
+    justify-self: center;
+    margin: 30px auto;
 }
