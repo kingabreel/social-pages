@@ -1,4 +1,4 @@
-<div class="loginBox-container">
+<div class="loginBox-container" *ngIf="!loginView">
     <div class="logo-container">
         <img src="{{imageLink}}" alt="#">
     </div>
@@ -17,7 +17,7 @@
         </div>
 
         <div class="buttons">
-            <button class="create-account" (click)="createAccount()">Criar conta</button>
+            <button class="create-account" (click)="createAccountWindow()">Criar conta</button>
             <button class="button-next_page" (click)="goToInputPassword()">Avançar</button>
         </div>
     </div>
@@ -38,8 +38,64 @@
         </div>
 
         <div class="buttons">
-            <button class="another-way_button" (click)="createAccount()">Tentar de outra forma</button>
+            <button class="another-way_button" (click)="createAccountWindow()">Tentar de outra forma</button>
             <button class="button-login" (click)="navigate()">Avançar</button>
         </div>
     </div>
+</div>
+
+<div class="loginBox-container" *ngIf="step == 1">
+    <div class="logo-container">
+        <img src="{{imageLink}}" alt="#">
+    </div>
+
+    <div class="text">
+        <h1>Criar uma conta do Google</h1>
+        <h2>Insira seu nome</h2>
+    </div>
+
+    <div class="inputs">
+        <input type="text" class="nome" placeholder="Nome" [(ngModel)]="username">
+        <input type="text" class="sobrenome" placeholder="Sobrenome (opcional)" [(ngModel)]="userSurName">
+    </div>
+
+    <button id="avancar" (click)="createAccountWindow()">Avançar</button>
+</div>
+
+<div class="loginBox-container" *ngIf="step == 2">
+    <div class="logo-container">
+        <img src="{{imageLink}}" alt="#">
+    </div>
+
+    <div class="text">
+        <h1>Informações básicas</h1>
+        <h2>Digite sua data de nascimento e gênero</h2>
+    </div>
+
+    <div class="nascimento">
+        <input type="text" placeholder="Dia">
+        <select name="month" class="month">
+            <option value="" disabled selected>Mês</option>
+            <option value="janeiro">Janeiro</option>
+            <option value="fevereiro">Fevereiro</option>
+            <option value="março">Março</option>
+            <option value="abril">Abril</option>
+            <option value="maio">Maio</option>
+            <option value="junho">Junho</option>
+            <option value="julho">Julho</option>
+            <option value="agosto">Agosto</option>
+            <option value="setembro">Setembro</option>
+            <option value="outubro">Outubro</option>
+            <option value="novembro">Novembro</option>
+            <option value="dezembro">Dezembro</option>
+        </select>
+        <input type="text" placeholder="Ano">
+    </div>
+    <select name="sex" class="sex">
+        <option value="male">Masculino</option>
+        <option value="female">Feminino</option>
+        <option value="non-binary">Não-binário</option>
+    </select>
+    <a href="#" class="loginBox-container-p">Por que pedimos informações de data de nascimento e gênero</a>
+    <button id="avancar" (click)="createAccountWindow()">Avançar</button>
 </div>

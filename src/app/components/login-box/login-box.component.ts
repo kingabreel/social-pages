@@ -3,7 +3,7 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'app-login-box',
   templateUrl: './login-box.component.html',
-  styleUrls: ['./login-box.component.css']
+  styleUrls: ['./login-box.component.css', './register-box.component.css']
 })
 export class LoginBoxComponent {
 @Input()
@@ -13,9 +13,17 @@ emailScreen: boolean = true;
 passwordScreen: boolean = false;
 checkBoxValue: boolean = false;
 
+loginView: boolean = false;
+step: number = 0;
 
-  createAccount(){ 
-    console.log("account created");
+username: string = '';
+userSurName: string = '';
+
+
+  createAccountWindow(){ 
+    this.loginView = true;
+    this.step++;
+    console.log(this.step);
   }
   goToInputPassword(){
     if(this.userMail != '' && this.userMail.length > 10 && this.userMail.endsWith('.com')) {
