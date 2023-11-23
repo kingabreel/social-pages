@@ -27,11 +27,11 @@ app.get('/register', (req, res) => {
 
 app.post('/register', async(req, res) => {
     try {
-        const { username, password, app } = req.body;
+        const { username, mail, password, app } = req.body;
 
         const hashedPass = await bcrypt.hash(password, 10);
 
-        users.push({ username, password: hashedPass, app});
+        users.push({ username, mail, password: hashedPass, app});
 
         res.status(201).send("Usuário registrado!");
         console.log(users);
@@ -43,7 +43,9 @@ app.post('/register', async(req, res) => {
 
 app.post('/login', async(req, res) => {
     try {
-        const {username, password } = req.body;
+        const { usernameOrEmail, password } = req.body;
+
+        const user = users.find(u => u.username === usernameOrEmail || u.mail === usernameOrEmail);
 
         if (!user) {
             return res.status(401).send("Usuário não registrado");
@@ -60,7 +62,8 @@ app.post('/login', async(req, res) => {
         console.error(error);
         res.status(500).send("Erro no servidor");
     }
-})
+});
+
 
 app.listen(PORT, () => {
     console.log("Servidor rodando.")
