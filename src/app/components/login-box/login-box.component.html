@@ -92,10 +92,66 @@
         <input type="text" placeholder="Ano">
     </div>
     <select name="sex" class="sex">
+        <option value="" disabled selected>Sexo</option>
         <option value="male">Masculino</option>
         <option value="female">Feminino</option>
         <option value="non-binary">Não-binário</option>
     </select>
     <a href="#" class="loginBox-container-p">Por que pedimos informações de data de nascimento e gênero</a>
     <button id="avancar" (click)="createAccountWindow()">Avançar</button>
+</div>
+
+<div class="loginBox-container" *ngIf="step == 3">
+    <div class="logo-container">
+        <img src="{{imageLink}}" alt="#">
+    </div>
+
+    <div class="text">
+        <h1>Escolha seu endereço do Gmail</h1>
+        <h2>Escolha um endereço do Gmail</h2>
+    </div>
+
+    <div class="inputs">
+        <div class="checkbox-email_box">
+            <div class="checkbox-email" (click)="mailChose(1)">
+                <div class="background" *ngIf="checkboxSelectEmail == 1">
+                    <span>&#10003;</span>
+                </div>
+            </div>
+            <h1>{{emails[0]}}</h1>
+        </div>
+        <div class="checkbox-email_box">
+            <div class="checkbox-email"(click)="mailChose(2)">
+                <div class="background" *ngIf="checkboxSelectEmail == 2">
+                    <span>&#10003;</span>
+                </div>
+            </div>
+            <h1>{{emails[1]}}</h1>
+        </div>
+        <div class="checkbox-email_box" >
+            <div class="checkbox-email" (click)="mailChose(3)">
+                <div class="background" *ngIf="checkboxSelectEmail == 3">
+                    <span>&#10003;</span>
+                </div>
+            </div>
+            <h1>{{emails[2]}}</h1>
+        </div>
+    </div>
+    <button id="avancar" (click)="createAccountWindow()">Avançar</button>
+</div>
+
+<div class="loginBox-container" *ngIf="step == 4">
+    <div class="logo-container">
+        <img src="{{imageLink}}" alt="#">
+    </div>
+
+    <div class="text">
+        <h1>Crie uma senha para sua conta Google</h1>
+        <h2>Insira sua senha</h2>
+    </div>
+    <div class="inputs">
+        <input type="password" placeholder="Senha" [(ngModel)]='createPass'>
+        <input type="password" placeholder="Confirme sua senha" [(ngModel)]='createPassConfirmation' (input)='verifyPass()'>
+    </div>
+    <button id="avancar" (click)="createAccount()">Criar Conta</button>
 </div>

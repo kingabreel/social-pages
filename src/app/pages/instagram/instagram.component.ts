@@ -33,6 +33,5 @@ export class InstagramComponent {
       console.error(error);
       alert('Erro ao registrar usuário.');
     }
-
   }
 }

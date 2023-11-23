@@ -13,7 +13,6 @@ import { PageOptionsComponent } from './components/page-options/page-options.com
 import { CardComponent } from './components/card/card.component';
 import { HomeComponent } from './pages/home/home.component';
 import { FormsModule } from '@angular/forms';
-import { CreateGoogleAccountComponent } from './components/create-google-account/create-google-account.component';
 
 @NgModule({
   declarations: [
@@ -26,8 +25,7 @@ import { CreateGoogleAccountComponent } from './components/create-google-account
     GoogleComponent,
     PageOptionsComponent,
     CardComponent,
-    HomeComponent,
-    CreateGoogleAccountComponent
+    HomeComponent
   ],
   imports: [
     BrowserModule,
