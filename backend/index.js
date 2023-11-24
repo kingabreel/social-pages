@@ -45,6 +45,8 @@ app.post('/login', async(req, res) => {
     try {
         const { usernameOrEmail, password } = req.body;
 
+        console.log('Received login request:', { usernameOrEmail, password });
+
         const user = users.find(u => u.username === usernameOrEmail || u.mail === usernameOrEmail);
 
         if (!user) {
@@ -58,8 +60,10 @@ app.post('/login', async(req, res) => {
         }
 
         res.status(200).send("Login sucedido!");
+
     } catch (error) {
         console.error(error);
+
         res.status(500).send("Erro no servidor");
     }
 });
