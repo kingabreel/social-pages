@@ -29,7 +29,7 @@
             {{userMail}}</h2>
         </div>
         <div class="data-input">
-            <input id="input" [attr.type]="checkBoxValue ? 'string' : 'password'" placeholder="Digite sua senha">
+            <input id="input" [attr.type]="checkBoxValue ? 'string' : 'password'" placeholder="Digite sua senha" [(ngModel)]="password">
             
             <div class="checkbox_container" (click)="showPass()">
                 <input type="checkbox" [ngModel]="checkBoxValue">
@@ -39,7 +39,7 @@
 
         <div class="buttons">
             <button class="another-way_button" (click)="createAccountWindow()">Tentar de outra forma</button>
-            <button class="button-login" (click)="navigate()">Avançar</button>
+            <button class="button-login" (click)="accountLogin()">Avançar</button>
         </div>
     </div>
 </div>

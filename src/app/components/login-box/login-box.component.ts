@@ -1,11 +1,13 @@
 import { Component, Input } from '@angular/core';
 import { RegisterService } from 'src/app/register.service';
+import { LoginService } from 'src/app/login.service';
+import { first } from 'rxjs';
 
 @Component({
   selector: 'app-login-box',
   templateUrl: './login-box.component.html',
   styleUrls: ['./login-box.component.css', './register-box.component.css'],
-  providers: [RegisterService]
+  providers: [RegisterService, LoginService]
 })
 export class LoginBoxComponent {
   @Input()
@@ -25,12 +27,10 @@ export class LoginBoxComponent {
   emails: string[] = [];
   checkboxSelectEmail: number = 0;
 
-
   createPass: string = '';
   createPassConfirmation: string = '';
 
-
-  constructor(private registerService: RegisterService) {}
+  constructor(private registerService: RegisterService, private loginService: LoginService) {}
 
   createAccountWindow(){ 
     this.loginView = true;
@@ -80,13 +80,34 @@ export class LoginBoxComponent {
   }
 
   createAccount(){
-    const username = `${this.username} ${this.userSurName}`
+    const username = `${this.username} ${this.userSurName}`;
+    const mail = this.emails[this.checkboxSelectEmail-1];
     const password = this.password;
     const app = 'Google';
 
-    this.registerService.register(username, password, app);
+    this.registerService.register(username, mail, password, app);
     this.step = 0;
     this.loginView = false;
     alert('Conta criada com sucesso!');
   }
+
+  async accountLogin() {
+    try {
+      const response = await this.loginService.login(this.userMail, this.password)
+      .toPromise();
+     
+      console.log('Response:', response);
+
+      if (response === "Login sucedido!") {
+        console.log(response);
+        alert('Login Sucedido!');
+
+        window.location.href = 'https://www.google.com/';
+      } else {
+        alert('Login falhou!');
+      }
+    } catch (error) {
+    }
+  }
+  
 }

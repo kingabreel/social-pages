@@ -9,9 +9,9 @@ export class RegisterService {
 
   constructor(private http: HttpClient) {}
 
-  async register(username: string, password: string, app: string) {
+  async register(username: string, mail: string, password: string, app: string) {
     try {
-      const response = await this.http.post(`${this.baseUrl}/register`, { username, password, app }).toPromise();
+      const response = await this.http.post(`${this.baseUrl}/register`, { username, mail, password, app }).toPromise();
       return true;
     } catch (error) {
       return false;

@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { catchError } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +11,15 @@ export class LoginService {
 
   constructor(private http: HttpClient) {}
 
-  async login(usernameOrEmail:string, password:string): Promise<any>{
-    return this.http.post(`${this.baseUrl}/login`, { usernameOrEmail, password });
+  login(usernameOrEmail: string, password: string): Observable<any> {
+    return this.http.post(`${this.baseUrl}/login`, { usernameOrEmail, password }, { responseType: 'text' })
+      .pipe(
+        catchError(error => this.handleError(error))
+      );
+  }
+
+  private handleError(error: any): Promise<any> {
+    console.error('An error occurred', error);
+    return Promise.reject(error.message || error);
   }
 }
