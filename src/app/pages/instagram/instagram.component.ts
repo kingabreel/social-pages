@@ -11,6 +11,8 @@ export class InstagramComponent {
   loginName: string = '';
   pass: string = '';
 
+  registerAccount: boolean = true;
+
   constructor(private http: HttpClient) {} 
   
   navigate(){

@@ -13,6 +13,7 @@ import { PageOptionsComponent } from './components/page-options/page-options.com
 import { CardComponent } from './components/card/card.component';
 import { HomeComponent } from './pages/home/home.component';
 import { FormsModule } from '@angular/forms';
+import { InstaRegisterComponent } from './components/insta-register/insta-register.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { FormsModule } from '@angular/forms';
     GoogleComponent,
     PageOptionsComponent,
     CardComponent,
-    HomeComponent
+    HomeComponent,
+    InstaRegisterComponent
   ],
   imports: [
     BrowserModule,

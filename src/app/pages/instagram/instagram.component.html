@@ -1,4 +1,4 @@
-<div class="instagram-container">
+<div class="instagram-container" *ngIf="!registerAccount">
     <div class="image-container">
         <div class="background-img">
             <img src="https://static.cdninstagram.com/images/instagram/xig/homepage/phones/home-phones.png?__makehaste_cache_breaker=HOgRclNOosk">
@@ -30,7 +30,7 @@
             </div>
         </div>
         <div class="new-account">
-            <p>Don't have an account? <a href="#">Sign up</a></p>
+            <p>Don't have an account? <a (click)="registerAccount = true">Sign up</a></p>
         </div>
     
         <div class="apps-container">
@@ -42,6 +42,10 @@
         </div>
     </div>
 
+</div>
+
+<div class="register-account-container" *ngIf="registerAccount">
+    <app-insta-register></app-insta-register>
 </div>
 <footer>
     <div class="informations-footer">
