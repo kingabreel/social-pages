@@ -18,10 +18,10 @@
         </div>
 
         <div class="inputs">
-            <input type="text" placeholder="Mobile Number or Email">
-            <input type="text" placeholder="Full Name">
-            <input type="text" placeholder="Username">
-            <input type="password" placeholder="Password">
+            <input type="text" placeholder="Mobile Number or Email" [(ngModel)]="email">
+            <input type="text" placeholder="Full Name" [(ngModel)]="name">
+            <input type="text" placeholder="Username" [(ngModel)]="username">
+            <input type="password" placeholder="Password" [(ngModel)]="password">
         </div>
 
         <div class="informations">
@@ -39,12 +39,12 @@
         </div>
 
         <div class="btn">
-            <button>Sign up</button>
+            <button (click)="createAccount()">Sign up</button>
         </div>
     </div>
 
     <div class="login-box">
-        <h1>Have an account? <a href="#">Log in</a></h1>
+        <h1>Have an account? <a href="/Instagram">Log in</a></h1>
     </div>
 
     <h2 id="getApp">Get the app.</h2>

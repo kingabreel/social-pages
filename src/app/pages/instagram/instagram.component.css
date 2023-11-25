@@ -121,6 +121,7 @@ div.division > h1::after{
     text-decoration: none;
     font-weight: 500;
     color: #1772da;
+    cursor: pointer;
 }
 
 .app-image {
