@@ -14,6 +14,7 @@ import { CardComponent } from './components/card/card.component';
 import { HomeComponent } from './pages/home/home.component';
 import { FormsModule } from '@angular/forms';
 import { InstaRegisterComponent } from './components/insta-register/insta-register.component';
+import { FbRegisterComponent } from './components/fb-register/fb-register.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { InstaRegisterComponent } from './components/insta-register/insta-regist
     PageOptionsComponent,
     CardComponent,
     HomeComponent,
-    InstaRegisterComponent
+    InstaRegisterComponent,
+    FbRegisterComponent
   ],
   imports: [
     BrowserModule,

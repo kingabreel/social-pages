@@ -16,6 +16,6 @@ export class InstaRegisterComponent {
 
   createAccount(){
     this.registerService.register(this.username, this.email, this.password, 'Instagram');
-    //window.location.href = '/Instagram';
+    window.location.href = '/Instagram';
   }
 }

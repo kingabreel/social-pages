@@ -8,6 +8,8 @@ import { Component } from '@angular/core';
 export class FacebookComponent {
   loginName: string = '';
   pass: string = '';
+  
+  registerView: boolean = false;
 
   navigate(){
     if (this.loginName.length > 5 && this.pass.length > 8) {
