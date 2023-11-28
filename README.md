@@ -1,27 +1,35 @@
-# SocialPages
+# Social Pages
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.1.
+Projeto em Angula, o intuito foi criar uma cópia da interface de algumas das principais páginas da web, o Google, o Twitter, o Facebook e o Instagram.
 
-## Development server
+O projeto utilizou Angular para o front-end e Node para o backend, foi implementado funcionalidades de cadastro de conta e login para cada página. O formato do usuário no back-end está como:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+```
+{
+    username: "nome"
+    mail: "email@mail.com"
+    password: "criptografada"
+    app: "App usado"
+}
+```
 
-## Code scaffolding
+Para a criptografia de senha foi usado o bycript.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+# Executando o projeto
 
-## Build
+Existem duas formas para executar o projeto, a primeira é simplesmente abrir o script disponível na pasta do projeto. 
+```social-pages/start_server.sh```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+A segunda maneira é indo na pasta **backend**, em seguida digitar o comando ```node index.js``` no terminal. Depois, na pasta social-pages, deve digitar ```ng serve```. Assim os servidores se iniciarão.
 
-## Running unit tests
+## Acessando a página
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Após execultar o projeto, e deixar o terminal aberto, o usuário deve ir no navegador e acessar o link ```http://localhost:4200/```
 
-## Running end-to-end tests
+## Imagens do projeto
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+![Backend](src/assets/backend.png){: style="max-width: 300px;"}
+![facebook](src/assets/fab.png){: style="max-width: 300px;"}
+![google](src/assets/google.png){: style="max-width: 300px;"}
+![home](src/assets/home.png){: style="max-width: 300px;"}
+![insta](src/assets/insta.png){: style="max-width: 300px;"}

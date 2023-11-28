@@ -49,7 +49,7 @@ export class TwitterComponent {
   createAccount(){
     this.registerService.register('user', this.emailRegister, this.passwordRegister, 'Twitter');
     alert("Registrado com sucesso!");
-    window.location.href = '/Facebook';
+    window.location.href = '/Twitter';
   }
 
   async login(){
