@@ -14,7 +14,7 @@
         
         <h2>or</h2>
 
-        <input type="text" placeholder="Phone, email or username">
+        <input type="text" placeholder="Phone, email or username" [(ngModel)]="emailLogin">
 
         <button (click)="switchPasswordWindow()">Next</button>
         <button class="forgot-pass">Forgot password?</button>
@@ -37,15 +37,37 @@
 
     <div class="inputs">
         <div class="username">
-            <h1>{{username}}</h1>
+            <h1>{{emailLogin}}</h1>
         </div>
-        <input type="password" class="pass" placeholder="Password">
+        <input type="password" class="pass" placeholder="Password" [(ngModel)]="passwordLogin">
         <p>Forgot password?</p>
     </div>
 
-    <button id="login-button">Log in</button>
+    <button id="login-button" (click)="login()">Log in</button>
     <div class="create-account">
         <h2>Don't have an account? <a href="#">Sign up</a></h2>
+    </div>
+</div>
+
+<div class="login-box_container" *ngIf="registerWindow">
+    <div class="login-box_header">
+        <a class="exit" (click)="switchPasswordWindow()">X</a>
+        <img src="https://www.phoronix.net/image.php?id=2023&image=twitter_x">
+    </div>
+
+    <div class="text">
+        <h1>Enter your password</h1>
+    </div>
+
+    <div class="inputs">
+        <input type="text" placeholder="Email" [(ngModel)]="emailRegister">
+        <input type="password" class="pass" placeholder="Password" [(ngModel)]="passwordRegister">
+        <p>Forgot password?</p>
+    </div>
+
+    <button id="login-button" (click)="createAccount()">Sign up</button>
+    <div class="create-account">
+        <h2>Already have an account? <a href="#">Sign in</a></h2>
     </div>
 </div>
 
@@ -67,7 +89,7 @@
                 
                 <h2>or</h2>
 
-                <button class="account-button">Create account</button>
+                <button class="account-button" (click)="registerWindow = !registerWindow">Create account</button>
             </div>
 
             <div class="text-terms">
