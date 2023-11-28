@@ -1,6 +1,6 @@
 <div class="facebook-container">
     <div class="register-container">
-        <app-fb-register></app-fb-register>
+        <app-fb-register *ngIf="registerView"></app-fb-register>
     </div>
     <div class="text-container">
         <h1>facebook</h1>
@@ -11,7 +11,7 @@
             <form>
                 <input type="text" [(ngModel)]="loginName" [ngModelOptions]="{ standalone: true }" placeholder="Phone number, username, or email">
                 <input type="password" [(ngModel)]="pass" [ngModelOptions]="{ standalone: true }" placeholder="Password">
-                <button class="login-button" (click)="navigate()">Log in</button>
+                <button class="login-button" (click)="login()">Log in</button>
             </form>
             
             <div class="forgot-pass">
@@ -19,7 +19,7 @@
             </div>
 
             <div class="create-account">
-                <button class="create-account_button">
+                <button class="create-account_button" (click)="registerView = true">
                     Create new account
                 </button>
             </div>

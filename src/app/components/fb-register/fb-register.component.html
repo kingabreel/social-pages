@@ -1,17 +1,20 @@
 <div class="register-container">
     <div class="text">
-        <h1>Cadastre-se</h1>
-        <h2>É rápido e fácil.</h2>
+        <div>
+            <h1>Sign Up</h1>
+            <p (click)="refresh()">X</p>
+        </div>
+        <h2>It's quick and easy.</h2>
     </div>
 
     <div class="inputs">
         <div class="name">
-            <input type="text" placeholder="First name">
-            <input type="text" placeholder="Last name">
+            <input type="text" placeholder="First name" [(ngModel)]="firstname">
+            <input type="text" placeholder="Last name" [(ngModel)]="lastname">
         </div>
 
-        <input type="text" placeholder="Mobile number or email">
-        <input type="text" placeholder="New password">
+        <input type="text" placeholder="Mobile number or email" [(ngModel)]="email">
+        <input type="password" placeholder="New password" [(ngModel)]="password">
 
         <p>Birthday</p>
         <div class="birthday">
@@ -111,5 +114,5 @@
         <p>By clicking Sign Up, you agree to our <a href="#">Terms</a>, <a href="#">Privacy Policy</a> and <a href="#">Cookies Policy</a>. You may receive SMS Notifications from us and can opt out any time</p>
     </div>
 
-    <button>Sign Up</button>
+    <button (click)="createAccount()">Sign Up</button>
 </div>
