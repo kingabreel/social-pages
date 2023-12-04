@@ -28,8 +28,8 @@ Após execultar o projeto, e deixar o terminal aberto, o usuário deve ir no nav
 
 ## Imagens do projeto
 
-![Backend](src/assets/backend.png){: style="max-width: 300px;"}
-![facebook](src/assets/fab.png){: style="max-width: 300px;"}
-![google](src/assets/google.png){: style="max-width: 300px;"}
-![home](src/assets/home.png){: style="max-width: 300px;"}
-![insta](src/assets/insta.png){: style="max-width: 300px;"}
+![Backend](src/assets/backend.png)
+![facebook](src/assets/fab.png)
+![google](src/assets/google.png)
+![home](src/assets/home.png)
+![insta](src/assets/insta.png)
